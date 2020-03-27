@@ -3,6 +3,8 @@ import { Link, useHistory } from 'react-router-dom';
 import LogoImg from '../../assets/logo.svg';
 import { FiArrowLeft } from 'react-icons/fi';
 
+import swal from 'sweetalert';
+
 import api from '../../services/api';
 
 import './styles.css';
@@ -39,9 +41,20 @@ export default function NewIncident() {
                 }
             })
 
+            swal({
+                title: "Sucesso!",
+                text: "Caso registrado com sucesso!",
+                icon: "success",
+                buttons: "Ok"
+            });
             history.push('/profile');   //Redirecionamento de rotas.
         } catch (err) {
-            alert('Erro ao cadastrar o caso, tente novamente.')
+            swal({
+                title: "Erro!",
+                text: "Erro ao cadastrar o caso, tente novamente.",
+                icon: "error",
+                buttons: "Ok"
+            });
         }
     }
 

@@ -3,6 +3,8 @@ import logoImg from '../../assets/logo.svg';
 import { Link, useHistory } from 'react-router-dom';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
 
+import swal from 'sweetalert';
+
 import api from '../../services/api';
 
 import './styles.css';
@@ -43,7 +45,12 @@ export default function Profiler() {
              */
             setIncidents(incidents.filter(incident => incident.id !== id));
         } catch (err) {
-            alert('Erro ao deletar caso, tente novamente.');
+            swal({
+                title: "Erro!",
+                text: "Erro ao deletar caso, tente novamente.",
+                icon: "error",
+                buttons: "Ok"
+            })
         }
     }
 

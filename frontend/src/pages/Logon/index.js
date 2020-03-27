@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
 
+import swal from 'sweetalert';
+
 import api from '../../services/api';
 
 import './styles.css';
@@ -33,7 +35,12 @@ export default function Logon() {
 
             history.push('/profile');
         } catch (err) {
-            alert('Falha no login, tente novamente.')
+            swal({
+                title: "Erro!",
+                text: "Falha no login, tente novamente.",
+                icon: "error",
+                buttons: "Ok"
+            })
         }
     }
 
