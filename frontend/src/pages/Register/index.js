@@ -8,6 +8,9 @@ import './styles.css';
 import LogoImg from '../../assets/logo.svg';
 
 export default function Register() {
+    /**
+     * Definindo os estados de cada propriedade.
+     */
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
@@ -17,7 +20,10 @@ export default function Register() {
     const history = useHistory();
 
     async function handleRegister(e) {
-        e.preventDefault();
+        /**
+         * Função para Cadastrar uma nova ONG.
+         */
+        e.preventDefault(); // Prevenindo que a página recarregue a cada requisição.
 
         const data = {
             name,

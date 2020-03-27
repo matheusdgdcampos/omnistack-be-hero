@@ -26,13 +26,21 @@ export default function Profiler() {
     }, [ongId]);
 
     async function handleDeleteIncident(id) {
+        /**
+         * Função para excluir um caso.
+         */
         try {
             await api.delete(`incidents/${id}`, {
                 headers: {
                     Authorization: ongId,
                 }
             })
-
+            /**
+             * Tratativa de erro que verifica se o caso cadastrado
+             * pertence o id que está na tentaiva de exclui-lo
+             * se pertence a sua lista e retornar true, a ação
+             * é feita, se retornar false ele nem se quer exibe.
+             */
             setIncidents(incidents.filter(incident => incident.id !== id));
         } catch (err) {
             alert('Erro ao deletar caso, tente novamente.');
@@ -40,6 +48,7 @@ export default function Profiler() {
     }
 
     function handleLogout() {
+        // Limpando o Local-Storage.
         localStorage.clear();
 
         history.push('/');
@@ -60,6 +69,7 @@ export default function Profiler() {
             <h1>Casos Cadastrados</h1>
 
             <ul>
+                {/* Aqui é feito um binding de todos os casos que pertencem a ONG. */}
                 {incidents.map(incident => (
                     <li key={incident.id}>
                         <strong>CASO:</strong>

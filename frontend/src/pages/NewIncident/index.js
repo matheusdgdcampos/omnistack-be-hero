@@ -8,6 +8,10 @@ import api from '../../services/api';
 import './styles.css';
 
 export default function NewIncident() {
+    /**
+     * Definindo estado de cada propriedade que será passado
+     * na requisição.
+     */
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [value, setValue] = useState('');
@@ -17,8 +21,11 @@ export default function NewIncident() {
     const ongId = localStorage.getItem('ongId');
 
     async function handleNewIncident(e) {
-        e.preventDefault();
-
+        e.preventDefault(); //impede que a página carregue por completo a cada requisição.
+        /**
+         * Aqui é uma função do React para cadastrar um novo caso
+         * para ser apoiado.
+         */
         const data = {
             title,
             description,
@@ -28,11 +35,11 @@ export default function NewIncident() {
         try {
             await api.post('incidents', data, {
                 headers: {
-                    Authorization: ongId
+                    Authorization: ongId    //Pegando o ID por parâmetro da ong cadastrada.
                 }
             })
 
-            history.push('/profile');
+            history.push('/profile');   //Redirecionamento de rotas.
         } catch (err) {
             alert('Erro ao cadastrar o caso, tente novamente.')
         }

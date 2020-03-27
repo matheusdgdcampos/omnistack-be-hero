@@ -10,16 +10,24 @@ import logoImg from '../../assets/logo.svg';
 import heroesImg from '../../assets/heroes.png';
 
 export default function Logon() {
+    /**
+     * Definindo o estado das propriedades.
+     */
     const [id, setId] = useState('');
 
     const history = useHistory();
 
     async function handleLogin(e) {
+        /**
+         * Função para efetuar o login no app.
+         */
         e.preventDefault();
 
         try {
             const response = await api.post('sessions', { id });
-
+            /**
+             * Guardando os dados da sessão no local-storage.
+             */
             localStorage.setItem('ongId', id);
             localStorage.setItem('ongName', response.data.name);
 
@@ -38,7 +46,7 @@ export default function Logon() {
                     <h1>Faça seu Logon</h1>
                     <input placeholder="Sua ID"
                         value={id}
-                        onChange={e => setId(e.target.value)}
+                        onChange={e => setId(e.target.value)}   //Definindo a mudança de estado.
                     />
                     <button className="button" type="submit">Entrar</button>
 
