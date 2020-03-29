@@ -21,7 +21,7 @@ export default function Logon() {
 
     async function handleLogin(e) {
         /**
-         * Função para efetuar o login no app.
+         * Função para previnir que seja carregada a página por completo.
          */
         e.preventDefault();
 
