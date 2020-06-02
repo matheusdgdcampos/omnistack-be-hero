@@ -41,16 +41,16 @@ export default function NewIncident() {
         },
       });
 
-      Swal.fire({
+      const response = await Swal.fire({
         title: "Sucesso!",
         text: "Caso registrado com sucesso!",
         icon: "success",
         buttons: "Ok",
-      }).then((resolve) => {
-        if (resolve.value) history.push("/profile"); //Redirecionamento de rotas.
-      });
+      })
+      
+      if (response.value) history.push("/profile"); //Redirecionamento de rotas.
     } catch (err) {
-      Swal.fire({
+      await Swal.fire({
         title: "Erro!",
         text: "Erro ao cadastrar o caso, tente novamente.",
         icon: "error",

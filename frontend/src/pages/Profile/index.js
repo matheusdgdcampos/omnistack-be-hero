@@ -46,7 +46,7 @@ export default function Profiler() {
        */
       setIncidents(incidents.filter((incident) => incident.id !== id));
     } catch (err) {
-      Swal.fire({
+      await Swal.fire({
         title: "Erro!",
         text: "Erro ao deletar caso, tente novamente.",
         icon: "error",

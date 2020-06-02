@@ -38,15 +38,15 @@ export default function Register() {
     try {
       const response = await api.post("ongs", data);
 
-      Swal.fire({
+      const message = await Swal.fire({
         title: "Sucesso!",
         text: `Cadastro efetuado com sucesso, seu ID é: ${response.data.id}`,
         icon: "success",
-      }).then((resolve) => {
-        if (resolve.value) history.push("/");
-      });
+      })
+      
+      if (message.value) history.push("/");
     } catch (err) {
-      Swal.fire({
+      await Swal.fire({
         title: "Erro!",
         text: "Erro ao efetuar cadastro, tente novamente.",
         icon: "error",
