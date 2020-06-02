@@ -1,42 +1,61 @@
-# Seja Bem vindo ao Be The Hero!
+<h1 align="center">
+    <img alt="DevRadar" title="#delicinha" src=".github/bethehero.svg" width="200px" />
+</h1>
 
-Aplicação Feita com as stacks mais utilizadas no mercado, unindo Nodejs, ReactJS e React Native.
+<h4 align="center">
+  🚀 Semana OmniStack 11.0
+</h4>
 
-### Características da aplicação:
+<p align="center">
+ <img src="https://img.shields.io/badge/Devs-Welcome-e02a41" alt="Welcome Devs" />
 
-A aplicação foi desenvolvida na semana Omnistack da Rocketseat, com o objetivo de ser desenvolvida uma aplicação escalável,
-com alto desempenho e utilizando as tecnologias de ponta usadas no mercado atual.
+  <img alt="License" src="https://img.shields.io/github/license/Teuuz1994/omnistack-be-hero?color=e02a41">
+</p>
 
-### Objetivo da aplicação:
+<p align="center">
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
 
-O Be The Hero tem como missão principal conectar ONGs locais ou até mesmo nacionais, com pessoas que etejam dispostas a ajudar 
-em seus objetivos.
+<br>
 
-### Quem pode participar das ajudas:
+<p align="center">
+  <img alt="BeTheHero" src=".github/bethehero.png" width="100%">
+</p>
 
-Qualquer pessoa que esteja pronta para ajudar e de braços abertos.
+## :rocket: Tecnologias
 
-### Características da aplicação na parte mobile:
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-A parte mobile foi utilizado uma das melhores stacks do mercado, o React Native, para melhor atender e conectar as ONGs com
-seus apoiadores.
+- [Node.js](https://nodejs.org/en/)
+- [React](https://reactjs.org)
+- [React Native](https://facebook.github.io/react-native/)
+- [Expo](https://expo.io/)
 
+## 💻 Projeto
 
-### Tecnologias envolvidas no backend:
+O BeTheHero é um projeto que visa conectar pessoas que desejam fazer contribuições monetárias a ONG's (Organizações não governamentais) que precisam de ajuda.
 
-1. knex para interação com o banco de dados;
-2. Jest para testes automatizados;
-3. Sqlite como base de dados utilizada;
-4. Supertest para conectar com as rotas das requisições.
+## 🔖 Layout
 
-### Tecnologias envolvidas no frontend:
+Você pode visualizar o layout do projeto no formato através [desse link](https://www.figma.com/file/2C2yvw7jsCOGmaNUDftX9n/Be-The-Hero---OmniStack-11?node-id=37%3A394). Lembrando que você irá precisar ter uma conta no [Figma](http://figma.com/).
 
-1. Como dito anteriormente, foi utilizado o ReactJS para o desenvolvimento das páginas com a metodologia SPA (Single Pages Aplication),
-integrando com perfeição o HTML, CSS e Javascript;
-2. Foi utilizado a biblioteca do sweetalert para melhor exibição das interações de alerta dentro da aplicação.
+## 🤔 Como contribuir
 
-### Tecnologias envolvidas no mobile:
+- Faça um fork desse repositório;
+- Cria uma branch com a sua feature: `git checkout -b minha-feature`;
+- Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
+- Faça push para a sua branch: `git push origin minha-feature`.
 
-1. Utilizado a biblioteca do axios para integração com as rotas de requisição do backend;
-2. Utilizado a biblioteca do expo para integrar as dependências dos dispositivo na aplicação mobile;
-3. Adicionado todas as dependências do intl para manipulação de valores de moedas.
+Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+---
+
+Criado por ♥ by Teuuz1994 :wave:
